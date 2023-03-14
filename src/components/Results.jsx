@@ -1,4 +1,4 @@
-import React,{useEffect} from "react";
+import React from "react";
 import { useLocation } from "react-router";
 
 import { useResultContext } from "../context/ResultContextProvider";
@@ -16,7 +16,7 @@ export default function Results(){
             <div className="d-flex flex-column">
                 {results?.results?.map(({url,title,description,position})=>(
                 <div className="mb-4 search-result" key={position}>
-                    <a href={url} target="_blank">
+                    <a href={url} target="_blank" rel="noreferrer">
                     <p className="result-link mb-0">
                     {url.length>40? (url.substring(0,40) + '...') :url}
                     </p>
