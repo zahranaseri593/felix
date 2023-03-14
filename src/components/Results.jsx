@@ -16,7 +16,7 @@ export default function Results(){
             <div className="d-flex flex-column">
                 {results?.results?.map(({url,title,description,position})=>(
                 <div className="mb-4 search-result" key={position}>
-                    <a href={url}>
+                    <a href={url} target="_blank">
                     <p className="result-link mb-0">
                     {url.length>40? (url.substring(0,40) + '...') :url}
                     </p>
